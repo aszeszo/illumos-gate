@@ -1897,7 +1897,11 @@ link path=var/ld/64 target=$(ARCH64)
 # The bootadm binary needs the etc/release file.
 #
 depend fmri=release/name type=require
-depend fmri=runtime/perl-584 type=require
+depend fmri=runtime/perl-512 type=require
+#
+# The intrd binary needs Sun::Solaris Perl 5.12 modules
+#
+depend fmri=runtime/perl-512/module/sun-solaris type=require
 #
 # The loadkeys binary needs the keytables.
 #

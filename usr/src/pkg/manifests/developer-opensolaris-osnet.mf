@@ -44,13 +44,11 @@ depend fmri=library/glib2@0.5.11-0.133 type=require
 depend fmri=library/libxml2@2.7.6-0.133 type=require
 depend fmri=library/libxslt@0.5.11-0.133 type=require
 depend fmri=library/nspr/header-nspr@0.5.11-0.133 type=require
-depend fmri=library/perl-5/xml-parser@0.5.11-0.133 type=require
+depend fmri=library/perl-5/xml-parser-512@2.36 type=require
 depend fmri=library/security/trousers@0.3.2-0.133 type=require
 depend fmri=print/cups@1.4.2-0.133 type=require
 depend fmri=print/filter/ghostscript@8.64-0.133 type=require
-depend fmri=runtime/perl-510/extra@5.10.0-0.133 type=require
-depend fmri=runtime/perl-510@5.10.0-0.133 type=require
-depend fmri=runtime/perl-584/extra@5.8.4-0.133 type=require
+depend fmri=runtime/perl-512@5.10.0-0.133 type=require
 depend fmri=system/header@0.5.11-0.133 type=require
 depend fmri=system/library/dbus@0.5.11-0.133 type=require
 depend fmri=system/library/install@0.5.11-0.133 type=require
