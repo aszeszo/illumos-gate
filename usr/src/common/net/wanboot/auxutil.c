@@ -97,14 +97,14 @@ asc2bmpstring(const char *str, int len)
 	int unilen;
 
 	/* Convert the character to the bmp format. */
-	if (asc2uni(str, len, &uni, &unilen) == 0) {
+	if (OPENSSL_asc2uni(str, len, &uni, &unilen) == 0) {
 		SUNWerr(SUNW_F_ASC2BMPSTRING, SUNW_R_MEMORY_FAILURE);
 		return (NULL);
 	}
 
 	/*
 	 * Adjust for possible pair of NULL bytes at the end because
-	 * asc2uni() returns a doubly null terminated string.
+	 * OPENSSL_asc2uni() returns a doubly null terminated string.
 	 */
 	if (uni[unilen - 1] == '\0' && uni[unilen - 2] == '\0')
 		unilen -= 2;

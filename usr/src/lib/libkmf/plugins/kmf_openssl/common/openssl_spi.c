@@ -2027,7 +2027,7 @@ OpenSSL_CertGetPrintable(KMF_HANDLE_T handle, const KMF_DATA *pcert,
 	int j;
 	int ext_index, nid, len;
 	BIO *mem = NULL;
-	STACK *emlst = NULL;
+	STACK_OF(OPENSSL_STRING) *emlst = NULL;
 	X509_EXTENSION *ex;
 	X509_CINF *ci;
 
@@ -2140,8 +2140,8 @@ OpenSSL_CertGetPrintable(KMF_HANDLE_T handle, const KMF_DATA *pcert,
 
 	case KMF_CERT_EMAIL:
 		emlst = X509_get1_email(xcert);
-		for (j = 0; j < sk_num(emlst); j++)
-			(void) BIO_printf(mem, "%s\n", sk_value(emlst, j));
+		for (j = 0; j < sk_OPENSSL_STRING_num(emlst); j++)
+			(void) BIO_printf(mem, "%s\n", sk_OPENSSL_STRING_value(emlst, j));
 
 		len = BIO_gets(mem, resultStr, KMF_CERT_PRINTABLE_LEN);
 		X509_email_free(emlst);
@@ -4265,7 +4265,7 @@ convertToRawKey(EVP_PKEY *pkey, KMF_RAW_KEY_DATA *key)
 			ty = sk_ASN1_TYPE_value(attr->value.set, 0);
 		}
 		if (ty != NULL) {
-			key->label = uni2asc(ty->value.bmpstring->data,
+			key->label = OPENSSL_uni2asc(ty->value.bmpstring->data,
 			    ty->value.bmpstring->length);
 		}
 	} else {

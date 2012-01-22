@@ -116,6 +116,7 @@ when locally allocated data exceeds 64K.
 #include <openssl/rsa.h>
 #include <openssl/bn.h>
 #include <openssl/dh.h>
+#include <openssl/err.h>
 #endif
 #endif
 
