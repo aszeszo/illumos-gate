@@ -535,6 +535,11 @@ ok:
 					    malloc(strlen(initenv[j])
 					    + strlen(initvar)
 					    + 2);
+					if (var == NULL) {
+						perror("malloc");
+						exit(4);
+					}
+
 					(void) strcpy(var, initenv[j]);
 					(void) strcat(var, "=");
 					(void) strcat(var, initvar);
