@@ -113,7 +113,6 @@ COMMON_MANFILES = 	Intro.4				\
 		 	mech.4				\
 		 	meddb.4				\
 		 	mnttab.4			\
-		 	mod_ipp.4			\
 		 	mpapi.conf.4			\
 		 	nca.if.4			\
 		 	ncad_addr.4			\
@@ -149,8 +148,6 @@ COMMON_MANFILES = 	Intro.4				\
 		 	pkgmap.4			\
 		 	policy.conf.4			\
 		 	power.conf.4			\
-		 	printers.4			\
-		 	printers.conf.4			\
 		 	priv_names.4			\
 		 	proc.4				\
 		 	process.4			\
