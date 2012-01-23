@@ -21,7 +21,6 @@ MANSECT = 	1m
 COMMON_MANFILES = 	6to4relay.1m		\
 	 	 	Intro.1m		\
 	 	 	Uutry.1m		\
-	 	 	accept.1m		\
 	 	 	acct.1m			\
 	 	 	acctadm.1m		\
 	 	 	acctcms.1m		\
@@ -79,8 +78,6 @@ COMMON_MANFILES = 	6to4relay.1m		\
 	 	 	clinfo.1m		\
 	 	 	clri.1m			\
 	 	 	consadm.1m		\
-	 	 	conv_lp.1m		\
-	 	 	conv_lpd.1m		\
 	 	 	coreadm.1m		\
 	 	 	cpustat.1m		\
 	 	 	cron.1m			\
@@ -207,7 +204,6 @@ COMMON_MANFILES = 	6to4relay.1m		\
 	 	 	in.fingerd.1m		\
 	 	 	in.ftpd.1m		\
 	 	 	in.iked.1m		\
-	 	 	in.lpd.1m		\
 	 	 	in.mpathd.1m		\
 	 	 	in.ndpd.1m		\
 	 	 	in.rarpd.1m		\
@@ -287,16 +283,6 @@ COMMON_MANFILES = 	6to4relay.1m		\
 	 	 	lofiadm.1m		\
 	 	 	logadm.1m		\
 	 	 	logins.1m		\
-	 	 	lpadmin.1m		\
-	 	 	lpfilter.1m		\
-	 	 	lpforms.1m		\
-	 	 	lpget.1m		\
-	 	 	lpmove.1m		\
-	 	 	lpsched.1m		\
-	 	 	lpset.1m		\
-	 	 	lpshut.1m		\
-	 	 	lpsystem.1m		\
-	 	 	lpusers.1m		\
 	 	 	luxadm.1m		\
 	 	 	mail.local.1m		\
 	 	 	makedbm.1m		\
@@ -393,15 +379,12 @@ COMMON_MANFILES = 	6to4relay.1m		\
 	 	 	ports.1m		\
 	 	 	powerd.1m		\
 	 	 	powertop.1m		\
-	 	 	ppdmgr.1m		\
 	 	 	pppd.1m			\
 			pppdump.1m		\
 	 	 	pppoec.1m		\
 	 	 	pppoed.1m		\
 	 	 	pppstats.1m		\
 	 	 	praudit.1m		\
-	 	 	print-service.1m	\
-	 	 	printmgr.1m		\
 	 	 	projadd.1m		\
 	 	 	projdel.1m		\
 	 	 	projmod.1m		\
@@ -666,7 +649,6 @@ MANSOFILES =	acctcon1.1m			\
 	 	quotaoff.1m			\
 	 	rarpd.1m			\
 	 	rdisc.1m			\
-	 	reject.1m			\
 	 	restricted_shell.1m		\
 	 	rexd.1m				\
 	 	rexecd.1m			\
@@ -710,8 +692,6 @@ MANFILES =	$(COMMON_MANFILES) $($(MACH)_MANFILES) $(MANSOFILES)
 intro.1m			:= SOSRC = man1m/Intro.1m
 
 uutry.1m			:= SOSRC = man1m/Uutry.1m
-
-reject.1m			:= SOSRC = man1m/accept.1m
 
 acctdisk.1m			:= SOSRC = man1m/acct.1m
 acctdusg.1m			:= SOSRC = man1m/acct.1m
