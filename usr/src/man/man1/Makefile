@@ -46,7 +46,6 @@ MANFILES=	acctcom.1			\
 	 	builtin.1			\
 	 	cal.1				\
 	 	calendar.1			\
-	 	cancel.1			\
 	 	cat.1				\
 	 	cd.1				\
 	 	cdrw.1				\
@@ -101,8 +100,6 @@ MANFILES=	acctcom.1			\
 	 	dispgid.1			\
 	 	dispuid.1			\
 	 	dos2unix.1			\
-	 	download.1			\
-	 	dpost.1				\
 	 	du.1				\
 	 	dump.1				\
 	 	dumpcs.1			\
@@ -115,7 +112,6 @@ MANFILES=	acctcom.1			\
 	 	elfedit.1			\
 	 	elfsign.1			\
 	 	elfwrap.1			\
-	 	enable.1			\
 	 	encrypt.1			\
 	 	enhance.1			\
 	 	env.1				\
@@ -212,8 +208,6 @@ MANFILES=	acctcom.1			\
 	 	look.1				\
 	 	lookbib.1			\
 	 	lorder.1			\
-	 	lp.1				\
-	 	lpstat.1			\
 	 	ls.1				\
 	 	m4.1				\
 	 	mac.1				\
@@ -283,9 +277,6 @@ MANFILES=	acctcom.1			\
 	 	plimit.1			\
 	 	pmadvise.1			\
 	 	pmap.1				\
-	 	postio.1			\
-	 	postprint.1			\
-	 	postreverse.1			\
 	 	ppgsz.1				\
 	 	ppriv.1				\
 	 	pr.1				\
@@ -436,7 +427,6 @@ MANSOFILES =	batch.1		\
 	 	decrypt.1	\
 	 	dirname.1	\
 	 	dirs.1		\
-	 	disable.1	\
 	 	dumpkeys.1	\
 		edit.1		\
 	 	errange.1	\
@@ -618,8 +608,6 @@ uncompress.1	:= SOSRC = man1/compress.1
 zcat.1		:= SOSRC = man1/compress.1
 
 red.1		:= SOSRC = man1/ed.1
-
-disable.1	:= SOSRC = man1/enable.1
 
 decrypt.1	:= SOSRC = man1/encrypt.1
 
