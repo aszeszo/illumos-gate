@@ -24,6 +24,7 @@
 # Copyright 2012, Andrzej Szeszo
 #
 
-set name=pkg.fmri value=pkg:/print/lp/filter/postscript-lp-filter@0.5.11,5.11-0.175
+set name=pkg.fmri \
+    value=pkg:/print/lp/filter/postscript-lp-filter@0.5.11,5.11-0.175
 set name=pkg.obsolete value=true
 set name=variant.arch value=$(ARCH)
