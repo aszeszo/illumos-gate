@@ -103,7 +103,6 @@ DIRS= \
 	/etc/fs  \
 	/etc/fs/nfs  \
 	/etc/fs/zfs \
-	/etc/ftpd  \
 	/etc/hal \
 	/etc/hal/fdi \
 	/etc/hal/fdi/information \
@@ -319,7 +318,6 @@ DIRS= \
 	/usr/share/audio \
 	/usr/share/audio/samples \
 	/usr/share/audio/samples/au \
-	/usr/share/hwdata \
 	/usr/share/lib \
 	/usr/share/lib/ccs \
 	/usr/share/lib/tmac  \
