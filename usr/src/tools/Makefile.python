@@ -90,6 +90,9 @@ python2.6/%.pyc: %.py
 $(ROOTPYDIR_26)/%.pyc: python2.6/%.pyc
 	$(INS.pyfile)
 
+$(ROOTPYDIR_26)/%.py: %.py
+	$(INS.pyfile)
+
 pyclobber:
 	$(RM) $(CLOBBERFILES)
 	$(RM) -rf $(CLOBBERDIRS)
