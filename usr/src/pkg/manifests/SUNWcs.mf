@@ -48,11 +48,11 @@ dir path=etc/dev group=sys
 dir path=etc/devices group=sys
 dir path=etc/dfs group=sys
 dir path=etc/dhcp group=sys
-dir path=etc/ftpd group=sys
 dir path=etc/fs group=sys
 dir path=etc/fs/dev group=sys
 dir path=etc/fs/hsfs group=sys
 dir path=etc/fs/ufs group=sys
+dir path=etc/ftpd group=sys
 dir path=etc/inet group=sys
 dir path=etc/init.d group=sys
 dir path=etc/lib group=sys
@@ -366,10 +366,10 @@ file path=etc/dhcp/inittab group=sys preserve=true
 file path=etc/dhcp/inittab6 group=sys preserve=true
 file path=etc/dumpdates group=sys mode=0664 preserve=true
 file path=etc/format.dat group=sys preserve=true
-file path=etc/ftpd/ftpusers group=sys mode=0644
 file path=etc/fs/dev/mount mode=0555
 file path=etc/fs/hsfs/mount mode=0555
 file path=etc/fs/ufs/mount mode=0555
+file path=etc/ftpd/ftpusers group=sys mode=0644
 file path=etc/group group=sys preserve=true
 file path=etc/inet/hosts group=sys preserve=true
 file path=etc/inet/inetd.conf group=sys preserve=true
