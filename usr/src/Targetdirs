@@ -101,6 +101,7 @@ DIRS= \
 	/etc/dfs  \
 	/etc/dladm \
 	/etc/fs  \
+	/etc/ftpd \
 	/etc/fs/nfs  \
 	/etc/fs/zfs \
 	/etc/hal \

@@ -26,6 +26,7 @@
 CRON_ENT= adm root sys
 CRON_LIB= .proto at.deny cron.deny queuedefs
 ETC_SCRIPT= group project ttysrch mailcap mime.types
+FTPUSERS= ftpusers
 ZI_SPECIAL= zones-index
 SUBDIRS= sun
 
@@ -41,6 +42,7 @@ CROND= $(ROOT)/var/spool/cron
 CRONTABD= $(ROOT)/var/spool/cron/crontabs
 CRONLIBD= $(ROOT)/etc/cron.d
 ETCZONESD= $(ROOT)/etc/zones
+ETCFTPD= $(ROOT)/etc/ftpd
 DIRS= $(CROND) $(CRONTABD) $(CRONLIBD)
 
 CRONTABS=	$(CRON_ENT:%=$(CRONTABD)/%)
@@ -60,7 +62,7 @@ $(CRONTABD)/root :=	FILEMODE =	0600
 all: $(CRON_ENT) $(CRON_LIB) $(ETC_SCRIPT) $(SUBDIRS)
 
 install: all $(DIRS) $(CRONTABS) $(CRONLIBS) $(ETCSCRIPTS) $(ETCZONESD) \
-	$(SUBDIRS) 
+	$(ETCFTPD) $(SUBDIRS)
 
 $(CRONTABD)/% : %
 	$(INS.file)
@@ -71,6 +73,10 @@ $(CRONLIBD)/% : %
 $(ETCZONESD): $(ZI_SPECIAL)
 	$(CP) -f $(ZI_SPECIAL) $(ZISPECIALS)
 	$(CHMOD) $(FILEMODE) $(ZISPECIALS)
+
+$(ETCFTPD): $(FTPUSERS)
+	$(CP) -f $(FTPUSERS) $(ETCFTPD)/$(FTPUSERS)
+	$(CHMOD) $(FILEMODE) $(ETCFTPD)/$(FTPUSERS)
 
 $(SUBDIRS): FRC
 	@cd $@; pwd; $(MAKE) $(MFLAGS) $(TARGET)
