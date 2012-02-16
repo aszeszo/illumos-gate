@@ -103,7 +103,7 @@
  * between two labels.  The ending label must be the same as the starting label
  * but with a suffix "_end".
  */
-#define	SIZEOF(label)	(offset label##_end - offset label)
+#define	SIZEOF(label)	(label##_end - label)
 
 
 	.title	"Solaris_Master_Boot"
