@@ -2,8 +2,9 @@
  * CDDL HEADER START
  *
  * The contents of this file are subject to the terms of the
- * Common Development and Distribution License (the "License").
- * You may not use this file except in compliance with the License.
+ * Common Development and Distribution License, Version 1.0 only
+ * (the "License").  You may not use this file except in compliance
+ * with the License.
  *
  * You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
  * or http://www.opensolaris.org/os/licensing.
@@ -18,38 +19,29 @@
  *
  * CDDL HEADER END
  */
-
 /*
  * Copyright 2005 Sun Microsystems, Inc.  All rights reserved.
  * Use is subject to license terms.
  */
 
-#ifndef _ASM_SUNDDI_H
-#define	_ASM_SUNDDI_H
+#include "quadint.h"
 
-#include <sys/ccompile.h>
-#include <sys/types.h>
+#pragma weak __floatundisf = ___floatundisf
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
-#if !defined(__lint) && defined(__GNUC__)
-
-#if defined(_BOOT)
-
-extern __GNU_INLINE void
-sync_instruction_memory(caddr_t v, size_t len)
+/*
+ * Convert an unsigned longlong_t to a single-precision floating point value.
+ */
+float
+___floatundisf(u_longlong_t a)
 {
-	__asm__ __volatile__("nop");
+	union uu aa;
+	double d;
+
+	aa.q = a;
+	d = aa.ul[H];
+	d *= (1 << HALF_BITS);
+	d *= (1 << HALF_BITS);
+	d += aa.ul[L];
+
+	return ((float)d);
 }
-
-#endif /* _BOOT */
-
-#endif /* !__lint && __GNUC__ */
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif	/* _ASM_SUNDDI_H */
