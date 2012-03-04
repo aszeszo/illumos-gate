@@ -494,7 +494,6 @@ sparc_SUBDIRS=		\
 	dcs		\
 	device_remap	\
 	drd		\
-	fps		\
 	fruadm		\
 	ldmad		\
 	oplhpd		\
