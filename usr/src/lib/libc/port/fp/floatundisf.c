@@ -2,8 +2,9 @@
  * CDDL HEADER START
  *
  * The contents of this file are subject to the terms of the
- * Common Development and Distribution License (the "License").
- * You may not use this file except in compliance with the License.
+ * Common Development and Distribution License, Version 1.0 only
+ * (the "License").  You may not use this file except in compliance
+ * with the License.
  *
  * You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
  * or http://www.opensolaris.org/os/licensing.
@@ -18,26 +19,29 @@
  *
  * CDDL HEADER END
  */
+/*
+ * Copyright 2005 Sun Microsystems, Inc.  All rights reserved.
+ * Use is subject to license terms.
+ */
+
+#include "quadint.h"
+
+#pragma weak __floatundisf = ___floatundisf
 
 /*
- * Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
+ * Convert an unsigned longlong_t to a single-precision floating point value.
  */
-
-#include "KMSAgentKeyCallout.h"
-
-#ifdef METAWARE
-extern "C" int ecpt_get_pc_key_and_xor( unsigned char * key );
-#endif
-
-/**
- *  Hook function to get the key in the clear (XOR is presently used)
- *  @returns 0=ok, nonzero = bad
- */
-int KMSAgentKeyCallout( unsigned char io_aKey[KMS_MAX_KEY_SIZE] )
+float
+___floatundisf(u_longlong_t a)
 {
-#ifndef METAWARE
-    return 0;
-#else
-    return ecpt_get_pc_key_and_xor( io_aKey );
-#endif    
+	union uu aa;
+	double d;
+
+	aa.uq = a;
+	d = aa.ul[H];
+	d *= (1 << HALF_BITS);
+	d *= (1 << HALF_BITS);
+	d += aa.ul[L];
+
+	return ((float)d);
 }

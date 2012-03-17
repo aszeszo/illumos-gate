@@ -112,7 +112,6 @@ SUBDIRS += \
 	libipmp		\
 	libiscsit	\
 	libkmf		\
-	libkmsagent	\
 	libkstat	\
 	libkvm		\
 	liblm		\
@@ -635,7 +634,7 @@ libinetsvc:	libscf
 librestart:	libuutil libscf
 ../cmd/sgs/libdl:	../cmd/sgs/libconv
 ../cmd/sgs/libelf:	../cmd/sgs/libconv
-pkcs11:		libcryptoutil libkmsagent
+pkcs11:		libcryptoutil
 udapl/udapl_tavor:	udapl/libdat
 libzfs:		libdevid libgen libnvpair libuutil \
 		libadm libavl libefi libidmap libmd
