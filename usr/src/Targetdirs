@@ -382,8 +382,6 @@ DIRS= \
 	/usr/share/man/man3slp \
 	/usr/share/man/man3socket \
 	/usr/share/man/man3stmf \
-	/usr/share/man/man3sysevent \
-	/usr/share/man/man3tecla \
 	/usr/share/man/man3tnf \
 	/usr/share/man/man3tsol \
 	/usr/share/man/man3ucb \

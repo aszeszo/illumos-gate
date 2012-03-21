@@ -70,8 +70,6 @@ SUBDIRS=man1		\
 	man3slp		\
 	man3socket	\
 	man3stmf	\
-	man3sysevent	\
-	man3tecla	\
 	man3tnf		\
 	man3tsol	\
 	man3ucb		\
