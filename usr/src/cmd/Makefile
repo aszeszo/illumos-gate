@@ -138,7 +138,6 @@ COMMON_SUBDIRS=		\
 	egrep		\
 	eject		\
 	emul64ioctl	\
-	enhance		\
 	env		\
 	eqn		\
 	expand		\

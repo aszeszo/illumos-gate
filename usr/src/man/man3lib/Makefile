@@ -90,7 +90,6 @@ MANFILES = 	libMPAPI.3lib		\
 	 	libstmf.3lib		\
 	 	libsys.3lib		\
 	 	libsysevent.3lib	\
-	 	libtecla.3lib		\
 	 	libthread.3lib		\
 	 	libtnfctl.3lib		\
 	 	libtsalarm.3lib		\

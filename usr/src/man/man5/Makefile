@@ -106,7 +106,6 @@ MANFILES = 	Intro.5			\
 	 	smf_template.5		\
 	 	standards.5		\
 	 	sticky.5		\
-	 	tecla.5			\
 	 	term.5			\
 	 	threads.5		\
 	 	trusted_extensions.5	\
@@ -143,8 +142,7 @@ MANSOFILES =	ANSI.5		\
 		pthreads.5	\
 		stability.5	\
 		standard.5	\
-		step.5		\
-		teclarc.5
+		step.5
 
 MANFILES +=	$(MANSOFILES)
 
@@ -182,8 +180,6 @@ XPG.5		:= SOSRC = man5/standards.5
 XPG3.5		:= SOSRC = man5/standards.5
 XPG4.5		:= SOSRC = man5/standards.5
 XPG4v2.5	:= SOSRC = man5/standards.5
-
-teclarc.5	:= SOSRC = man5/tecla.5
 
 pthreads.5	:= SOSRC = man5/threads.5
 

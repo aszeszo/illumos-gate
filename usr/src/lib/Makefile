@@ -121,7 +121,6 @@ SUBDIRS += \
 	libnls		\
 	libnwam		\
 	libsmbios	\
-	libtecla	\
 	libumem		\
 	libnvpair	.WAIT	\
 	libexacct	\
@@ -458,7 +457,6 @@ HDRSUBDIRS=		\
 	libstmfproxy	\
 	libsum		\
 	libsysevent	\
-	libtecla	\
 	libtnf		\
 	libtnfctl	\
 	libtnfprobe	\
@@ -599,7 +597,7 @@ librdc:		libsocket libnsl libnsctl libunistat libdscfg
 libuuid:	libdlpi
 $(CLOSED_BUILD)libike:	libipsecutil libxnet libcryptoutil
 libinetutil:	libsocket
-libipsecutil:	libtecla libsocket
+libipsecutil:	libsocket
 libinstzones:	libzonecfg libcontract
 libpkg:		libwanboot libscf libadm
 libnwam:	libscf
