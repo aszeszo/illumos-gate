@@ -14,7 +14,7 @@
 # Copyright 2012, Andrzej Szeszo
 #
 
-set name=pkg.fmri value=pkg:/system/data/zoneinfo@2011.13,5.11-0.148
+set name=pkg.fmri value=pkg:/system/data/zoneinfo@2011.13,5.11-0.175
 set name=pkg.renamed value=true
 set name=variant.arch value=$(ARCH)
-depend fmri=pkg:/system/data/zoneinfo@2011.13,5.11-0.148 type=require
+depend fmri=pkg:/system/data/zoneinfo@2011.13,5.11-0.175 type=require

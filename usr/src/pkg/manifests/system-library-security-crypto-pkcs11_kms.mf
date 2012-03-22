@@ -22,6 +22,6 @@
 #
 
 set name=pkg.fmri \
-    value=pkg:/system/library/security/crypto/pkcs11_kms@$(PKGVERS)
+    value=pkg:/system/library/security/crypto/pkcs11_kms@0.5.11,5.11-0.175
 set name=pkg.obsolete value=true
 set name=variant.arch value=$(ARCH)
