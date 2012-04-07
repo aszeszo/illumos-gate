@@ -212,7 +212,6 @@ AS_CPPFLAGS	= $(ALWAYS_DEFS) $(ALL_DEFS) $(CONFIG_DEFS) $(AS_DEFS) \
 
 # Override the default, the kernel is squeaky clean
 CERRWARN = -errtags=yes -errwarn=%all
-$(__GNUC4)CERRWARN += -_gcc=-Wno-address
 
 C99MODE = $(C99_ENABLE)
 
@@ -223,6 +222,7 @@ CFLAGS_uts		+= $(ILDOFF)
 CFLAGS_uts		+= $(XAOPT)
 CFLAGS_uts		+= $(CTF_FLAGS)
 CFLAGS_uts		+= $(CERRWARN)
+CFLAGS_uts		+= $(CCNOAUTOINLINE)
 CFLAGS_uts		+= $(CGLOBALSTATIC)
 CFLAGS_uts		+= $(EXTRA_CFLAGS)
 
