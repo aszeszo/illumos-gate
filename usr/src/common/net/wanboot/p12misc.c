@@ -440,7 +440,7 @@ sunw_get_pkey_fname(getdo_actions_t dowhat, EVP_PKEY *pkey, char **fname)
 	}
 
 	str = ty->value.bmpstring;
-	*fname = OPENSSL_uni2asc(str->data, str->length);
+	*fname = uni2asc(str->data, str->length);
 	if (*fname == NULL) {
 		SUNWerr(SUNW_F_GET_PKEY_FNAME, SUNW_R_MEMORY_FAILURE);
 		return (-1);

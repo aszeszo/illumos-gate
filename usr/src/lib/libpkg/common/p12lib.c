@@ -1137,7 +1137,7 @@ sunw_get_pkey_fname(getdo_actions_t dowhat, EVP_PKEY *pkey, char **fname)
 	}
 
 	str = ty->value.bmpstring;
-	*fname = OPENSSL_uni2asc(str->data, str->length);
+	*fname = uni2asc(str->data, str->length);
 	if (*fname == NULL) {
 		SUNWerr(SUNW_F_GET_PKEY_FNAME, SUNW_R_MEMORY_FAILURE);
 		return (-1);
@@ -2295,7 +2295,7 @@ asc2bmpstring(const char *str, int len)
 	int unilen;
 
 	/* Convert the character to the bmp format. */
-	if (OPENSSL_asc2uni(str, len, &uni, &unilen) == 0) {
+	if (asc2uni(str, len, &uni, &unilen) == 0) {
 		SUNWerr(SUNW_F_ASC2BMPSTRING, SUNW_R_MEMORY_FAILURE);
 		return (NULL);
 	}

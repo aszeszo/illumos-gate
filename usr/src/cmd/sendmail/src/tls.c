@@ -1168,7 +1168,7 @@ tls_get_info(ssl, srv, host, mac, certreq)
 	MACROS_T *mac;
 	bool certreq;
 {
-	const SSL_CIPHER *c;
+	SSL_CIPHER *c;
 	int b, r;
 	long verifyok;
 	char *s, *who;
