@@ -30,6 +30,7 @@
 
 /*
  * Copyright (c) 2008, 2010, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2012, OmniTI Computer Consulting, Inc. All rights reserved.
  */
 
 #include <errno.h>
@@ -4773,7 +4774,11 @@ decode_data(unsigned char **out_data, unsigned int *out_data_len,
     if (buf == NULL)
 	return ENOMEM;
 
+#if OPENSSL_VERSION_NUMBER < 0x10000000L
+    len = EVP_PKEY_decrypt(buf, data, (int)data_len, pkey);
+#else
     len = EVP_PKEY_decrypt_old(buf, data, (int)data_len, pkey);
+#endif
     if (len <= 0) {
 	pkiDebug("unable to decrypt received data (len=%d)\n", data_len);
 	/* Solaris Kerberos */
