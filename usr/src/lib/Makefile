@@ -124,7 +124,6 @@ SUBDIRS += \
 	libumem		\
 	libnvpair	.WAIT	\
 	libexacct	\
-	libldap4	\
 	libsasl		\
 	libldap5	\
 	libsldap	.WAIT	\
