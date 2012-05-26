@@ -109,7 +109,6 @@ MANFILES =	Intro.5			\
 		smf_template.5		\
 		standards.5		\
 		sticky.5		\
-		tecla.5			\
 		term.5			\
 		threads.5		\
 		trusted_extensions.5	\
